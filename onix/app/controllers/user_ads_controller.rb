@@ -6,7 +6,7 @@ class UserAdsController < ApplicationController
   end
 
   def show
-
+    @ad = Ad.find(params[:id])
   end
 
   def post
@@ -18,6 +18,6 @@ class UserAdsController < ApplicationController
   end
 
   def coin
-
+    @coin = current_user.takeshi
   end
 end
