@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'top#index'
-  resources  :users_ads, only: %i(index show) do
+  resources  :user_ads, only: %i(index show) do
     get 'post', :on => :collection
     get 'setting', :on => :collection
     get 'coin', :on => :collection
