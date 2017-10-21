@@ -74,6 +74,7 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
@@ -118,6 +119,21 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+/*top*/
+.top_btn{
+  background-color: #D8D8D8;
+  width: 50%;
+  height: 50px;
+  margin: 0 auto 50px 0;
+  border-radius: 5px;
+  a{
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+  }
 }
 
 /*Contents*/
