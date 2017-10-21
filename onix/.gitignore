@@ -21,3 +21,4 @@
 .idea/
 ../.ideag
 config/database.yml
+public/system/
