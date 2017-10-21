@@ -18,6 +18,6 @@ class UserAdsController < ApplicationController
   end
 
   def coin
-
+    @coin = current_user.takeshi
   end
 end
