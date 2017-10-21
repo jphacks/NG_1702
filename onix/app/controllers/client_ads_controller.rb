@@ -6,5 +6,6 @@ class ClientAdsController < ApplicationController
   end
 
   def index
+    @ads = Ad.where(client_id: current_client.id)
   end
 end

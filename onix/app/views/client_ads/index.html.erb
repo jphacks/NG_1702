@@ -1,3 +1,4 @@
-<h1>ClientAds#index</h1>
-<p>Find me in app/views/client_ads/index.html.erb</p>
+<% @ads.each do |ad| %>
+    <%= ad.title  %>
+<% end %>
 <%= link_to "ログアウト", destroy_client_session_path, method: :delete %>
