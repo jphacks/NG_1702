@@ -10,7 +10,11 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'top#index'
-  resources  :users_ads
+  resources  :users_ads, only: %i(index show) do
+    get 'post', :on => :collection
+    get 'setting', :on => :collection
+    get 'coin', :on => :collection
+  end
   get 'top/index' => 'top#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
