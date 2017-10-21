@@ -6,7 +6,8 @@
     <!--クーポン名?広告名?領域-->
     <span></span>
     <% @user_ads.each do |user_ad|  %>
-      <%= user_ad.ad.title %>
+        <%= user_ad.ad.title %>
+        <%= link_to '詳細', user_ad, method: :get, id: user_ad.ad.title %>
     <% end %>
   </div>
   <%= render partial: "footer" %>
