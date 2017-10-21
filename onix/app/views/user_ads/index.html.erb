@@ -5,6 +5,9 @@
     <span>取得日時：<date></date></span>
     <!--クーポン名?広告名?領域-->
     <span></span>
+    <% @user_ads.each do |user_ad|  %>
+      <%= user_ad.ad.title %>
+    <% end %>
   </div>
   <%= render partial: "footer" %>
 </div>

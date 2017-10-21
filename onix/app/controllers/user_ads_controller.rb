@@ -1,6 +1,8 @@
 class UserAdsController < ApplicationController
-  def index
+  before_action :authenticate_user!
 
+  def index
+    @user_ads = UserAd.where(user_id: current_user.id)
   end
 
   def show
