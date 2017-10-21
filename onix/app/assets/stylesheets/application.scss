@@ -121,6 +121,14 @@ input, select {
     vertical-align:middle;
 }
 
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 /*top*/
 .top_btn{
   background-color: #D8D8D8;
@@ -149,8 +157,28 @@ h1{
 	color: brown;
 }
 
+.ad_left{
+  float: left;
+  width: 48%;
+  margin: 0 1% 50px 1%;
+}
+
+.ad_right{
+  float: left;
+  width: 48%;
+  margin: 0 1% 50px 1%;
+}
+
+
 .adsection{
-	background-color: $base_clr;
+  width: 100%;
+  img{
+    border: 1px solid #D8D8D8;
+    background-color: blue;
+  }
+  span{
+    display: block;
+  }
 }
 
 footer{
@@ -162,14 +190,21 @@ footer{
 
 	nav{
     height: 100%;
-		ul{
-			display: flex;
-			width: 100%;
-			li{
-				width: 25%;
-				text-align: center;
-				line-height: 100%;
-			}
-		}
+    .icon_flyer {
+      background: image-url("icon_flyer.svg") no-repeat;
+      background-position: center center;
+    }
+    .icon_post {
+      background: image-url("icon_post.svg") no-repeat;
+      background-position: center center;
+    }
+    .icon_coin {
+      background: image-url("icon_coin.svg") no-repeat;
+      background-position: center center;
+    }
+    .icon_setting {
+      background: image-url("icon_setting.svg") no-repeat;
+      background-position: center center;
+    }
 	}
 }
