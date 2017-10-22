@@ -1,21 +1,48 @@
 <div id="wrapper">
   <%= render partial: "header" %>
-  <!--<p>まずはフォローしましょう！</p>-->
+  <!--
+  <% @user_ads.each do |user_ad|  %>
   <div class="ad_left">
-    <img src="#" width="100%" height="100%" alt="画像入ります" />
-    <!--クーポン名?広告名?領域-->
-    <span>タケシのニビジム</span>
+    <%= image_tag user_ad.ad.image.url(:thumb) %>
+    <span><%= user_ad.ad.title %></span>
   </div>
   <div class="ad_right">
-    <img src="#" width="171" height="194" alt="" />
-    <!--クーポン名?広告名?領域-->
+    <%= image_tag user_ad.ad.image.url(:thumb) %>
     <span>タケシのニビジム</span>
-    <span></span>
+    <span><%= user_ad.ad.title %></span>
+    <!--
     <% @user_ads.each do |user_ad|  %>
         <%= user_ad.ad.title %>
         <%= image_tag user_ad.ad.image.url(:thumb) %>
         <%= link_to '詳細', user_ad, method: :get, id: user_ad.ad.title %>
     <% end %>
+
   </div>
+  <% end %>
+-->
+  <div id="ad_container">
+  <% @user_ads.each do |user_ad|  %>
+    <div class="ad_item">
+      <%= image_tag user_ad.ad.image.url(:thumb) %>
+      <p><%= user_ad.ad.title %></p>
+      <p><%= link_to '詳細', user_ad, method: :get, id: user_ad.ad.title %></p>
+    </div>
+  <% end %>
+  </div>
+
   <%= render partial: "footer" %>
 </div>
+<script>
+jQuery(function($){
+    var options = {
+        // レイアウトのオプション
+        autoResize: true, // リサイズ時にレイアウトを更新
+        container: $('#ad_container'), //コンテナを指定（CSS の設定で中央寄せ等する場合必要）
+        itemWidth: 50%, // 列の幅の指定（オプション）
+        offset: 5, //アイテム間のマージン（オプション）
+        outerOffset: 10, // コンテナからのオフセット（オプション）
+        fillEmptySpace: true // 最後の空いたスペースを「.wookmark-placeholder」で埋める（オプション）
+    };
+    $('.ad_item').wookmark(options);
+});
+</script>
