@@ -1,10 +1,12 @@
 class UserAdsController < ApplicationController
-  def index
+  before_action :authenticate_user!
 
+  def index
+    @user_ads = UserAd.where(user_id: current_user.id)
   end
 
   def show
-
+    @ad = Ad.find(params[:id])
   end
 
   def post
@@ -16,6 +18,6 @@ class UserAdsController < ApplicationController
   end
 
   def coin
-
+    @coin = current_user.takeshi
   end
 end
