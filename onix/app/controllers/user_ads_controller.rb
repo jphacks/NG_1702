@@ -32,7 +32,9 @@ class UserAdsController < ApplicationController
   end
 
   def get_ad
-    
+    client = Client.find(params[:id])
+    UserAd.create(user_id: current_user.id, ad_id: client.u_ad_id)
+    redirect_to user_ads_path
   end
 
   def coin

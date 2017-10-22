@@ -17,6 +17,12 @@ class ClientAdsController < ApplicationController
     @create_data = Ad.create(title: ad_params[:title], image: ad_params[:image], client_id: current_client.id)
   end
 
+  def check
+    @client = Client.find(current_client.id)
+    @client.update(u_ad_id: params[:id])
+    redirect_to client_ads_path
+  end
+
   def setting
 
   end
