@@ -9,7 +9,7 @@
 <div id="wrapper">
 
   <button class="button button--outline">いいね！</button>
-  <div class="ad_detail_img"><%= image_tag @ad.image.url(:thumb) %></div>
+  <div class="ad_detail_img"><%= image_tag @ad.image.url(:original) %></div>
   <%= @ad.client.name %>
   <%= @ad.title %>
   <%= render partial: "footer" %>
