@@ -1,18 +1,14 @@
 <div id="wrapper">
   <%= render partial: "header" %>
-  <!--<p>まずはフォローしましょう！</p>-->
   <% @user_ads.each do |user_ad|  %>
   <div class="ad_left">
-    <!--<img src="#" width="100%" height="100%" alt="画像入ります" />-->
-    <!--クーポン名?広告名?領域-->
     <%= image_tag user_ad.ad.image.url(:thumb) %>
     <span><%= user_ad.ad.title %></span>
   </div>
   <div class="ad_right">
-    <img src="#" width="171" height="194" alt="" />
-    <!--クーポン名?広告名?領域-->
+    <%= image_tag user_ad.ad.image.url(:thumb) %>
     <span>タケシのニビジム</span>
-    <span></span>
+    <span><%= user_ad.ad.title %></span>
     <!--
     <% @user_ads.each do |user_ad|  %>
         <%= user_ad.ad.title %>
