@@ -1,5 +1,17 @@
+<script>
+    $(function(){
+        // Initialization code
+        ons.notification.alert('10Takeshi GETだぜ');
+    });
+</script>
+
 <!--詳細画面-->
-<%= @ad.client.name %>
- <%= @ad.title %>
-<%= image_tag @ad.image.url(:thumb) %>
-<%= render partial: "footer" %>
+<div id="wrapper">
+
+  <button class="button button--outline">いいね！</button>
+  <div class="ad_detail_img"><%= image_tag @ad.image.url(:original) %></div>
+  <%= @ad.client.name %>
+  <%= @ad.title %>
+  <%= render partial: "footer" %>
+
+</div>

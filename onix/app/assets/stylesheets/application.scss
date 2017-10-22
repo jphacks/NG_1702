@@ -75,6 +75,7 @@ a {
     vertical-align:baseline;
     background:transparent;
     text-decoration: none;
+    color: #262626
 }
 
 /* change colours to suit your needs */
@@ -143,41 +144,106 @@ input, select {
     color: #ffffff;
   }
 }
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
 
 /*Contents*/
 
-$base_clr: #FFFFFF;
+$base_back_clr: #FFFFFF;
+$base_txt_clr: #262626;
+
+html,body{
+  width: 100%;
+}
 
 #wrapper{
   position: relative;
-  background-color: $base_clr;
-}
-
-h1{
-	color: brown;
-}
-
-.ad_left{
-  float: left;
-  width: 48%;
-  margin: 0 1% 50px 1%;
-}
-
-.ad_right{
-  float: left;
-  width: 48%;
-  margin: 0 1% 50px 1%;
-}
-
-
-.adsection{
+  background-color: $base_back_clr;
   width: 100%;
+}
+
+/*top*/
+
+.top_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.top_child{
+  //margin: auto;
+}
+
+.top_title{
+  margin-top: 200px;
+  margin-bottom: 28px;
+  font-size: 20px;
+  text-align: center;
+  color: $base_txt_clr;
+}
+
+.top_btn1{
+  background-color: #F9CE34 !important;
+}
+
+.top_btn2{
+  background-color: $base_back_clr !important;
+  border: 1px solid #E5E5DC !important;
+  color: #F9CE34 !important;
+}
+
+.top_company{
+  text-align: center;
+  color: #8D8D8D;
+}
+
+/* ad */
+
+#ad_container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.ad_item {
+  /*margin: 0 10px;*/
+  /*width: 140px;*/
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #eee;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ad_item img {
+  width: 100%;
+}
+.ad_item p {
+  text-align: center;
+  margin: 5px auto;
+  font-size: 12px;
+  color: #999999;
+}
+/* fillEmptySpace を設定した場合に追加される要素  */
+.wookmark-placeholder {
+  background-color: #efefef;
+}
+
+/* /ad */
+
+.ad_detail_img{
+  width: 100%;
+  padding: 10px;
   img{
-    border: 1px solid #D8D8D8;
-    background-color: blue;
-  }
-  span{
-    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 
