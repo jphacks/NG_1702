@@ -10,11 +10,29 @@ class UserAdsController < ApplicationController
   end
 
   def post
+    uri = URI.parse("http://192.168.179.8:8000/cgi-bin/sample_1.py?uid=#{current_user.id}")
+    response = Net::HTTP.start(uri.host, uri.port) do |http|
+      http.get(uri.request_uri)
+    end
 
+    begin
+      case response
+        when Net::HTTPSuccess
+          @result = JSON.parse(response.body)
+        else
+          @message = "HTTP ERROR: code=#{response.code} message=#{response.message}"
+      end
+    rescue => e
+      @message = "e.message"
+    end
   end
 
   def setting
 
+  end
+
+  def get_ad
+    
   end
 
   def coin

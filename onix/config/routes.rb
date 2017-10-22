@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'post', :on => :collection
     get 'setting', :on => :collection
     get 'coin', :on => :collection
+    get 'get_ad', :on => :member
   end
 
   resources  :client_ads, only: %i(index new create) do
