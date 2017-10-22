@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many  :user_categories
   has_many  :user_ads
+  has_many  :devices
 end
