@@ -22,3 +22,5 @@
 ../.ideag
 config/database.yml
 public/system/
+
+/.env
