@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  endpoint: 
+  p256dh: 
+  auth: MyString
+
+two:
+  user_id: 
+  endpoint: 
+  p256dh: 
+  auth: MyString
