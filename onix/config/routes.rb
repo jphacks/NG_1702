@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     get 'coin', :on => :collection
   end
 
-  resources  :client_ads
+  resources  :client_ads, only: %i(index new create) do
+    get 'setting', :on => :collection
+  end
   get 'top/index' => 'top#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

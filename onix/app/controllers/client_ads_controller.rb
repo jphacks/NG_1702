@@ -17,6 +17,10 @@ class ClientAdsController < ApplicationController
     @create_data = Ad.create(title: ad_params[:title], image: ad_params[:image], client_id: current_client.id)
   end
 
+  def setting
+
+  end
+
   private
   def ad_params
     params.require(:ad).permit(:title, :image, :client_id)
