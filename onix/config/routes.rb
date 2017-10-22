@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources  :client_ads, only: %i(index new create) do
     get 'setting', :on => :collection
+    get 'check', :on => :member
   end
   get 'top/index' => 'top#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

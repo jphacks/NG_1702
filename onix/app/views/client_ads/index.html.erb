@@ -1,4 +1,11 @@
 <% @ads.each do |ad| %>
     <%= ad.title  %>
     <%= image_tag ad.image.url(:thumb) %>
+    <% if ad.id == current_client.u_ad_id %>
+        公開中
+    <% else %>
+        <%= link_to '非表示中',"/client_ads/#{ad.id}/check" %>
+    <% end %>
 <% end %>
+
+<%= render partial: "footer" %>
