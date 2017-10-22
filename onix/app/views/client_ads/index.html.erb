@@ -1,4 +1,6 @@
+<div id="ad_container">
 <% @ads.each do |ad| %>
+  <div class="ad_item">
     <%= ad.title  %>
     <%= image_tag ad.image.url(:thumb) %>
     <% if ad.id == current_client.u_ad_id %>
@@ -6,6 +8,22 @@
     <% else %>
         <%= link_to '非表示中',"/client_ads/#{ad.id}/check" %>
     <% end %>
+  </div>
 <% end %>
+</div>
 
 <%= render partial: "footer" %>
+<script>
+jQuery(function($){
+    var options = {
+        // レイアウトのオプション
+        autoResize: true, // リサイズ時にレイアウトを更新
+        container: $('#ad_container'), //コンテナを指定（CSS の設定で中央寄せ等する場合必要）
+        itemWidth: 50%, // 列の幅の指定（オプション）
+        offset: 5, //アイテム間のマージン（オプション）
+        outerOffset: 10, // コンテナからのオフセット（オプション）
+        fillEmptySpace: true // 最後の空いたスペースを「.wookmark-placeholder」で埋める（オプション）
+    };
+    $('.ad_item').wookmark(options);
+});
+</script>
