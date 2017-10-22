@@ -1,5 +1,10 @@
 <!--詳細画面-->
-<%= @ad.client.name %>
- <%= @ad.title %>
-<%= image_tag @ad.image.url(:thumb) %>
-<%= render partial: "footer" %>
+<div id="wrapper">
+
+  <button class="button button--outline">いいね！</button>
+  <%= image_tag @ad.image.url(:thumb) %>
+  <%= @ad.client.name %>
+  <%= @ad.title %>
+  <%= render partial: "footer" %>
+
+</div>
