@@ -7,6 +7,7 @@ class UserAdsController < ApplicationController
 
   def show
     @ad = Ad.find(params[:id])
+    User.find(current_user.id).update(takeshi: current_user.takeshi + 10)
   end
 
   def post
