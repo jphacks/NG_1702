@@ -1,0 +1,14 @@
+<%= form_for @ads, :url => {:action => :create} do |f| %>
+    <div class="field">
+      <%= f.label '広告画像'%><br />
+      <%= f.file_field :image, class: "", placeholder: "画像アップロード" %>
+    </div>
+    <div class="field">
+      <%= f.label 'タイトル' %><br />
+      <%= f.text_field :title, class: "" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "作成", class: "" %>
+    </div>
+<% end %>

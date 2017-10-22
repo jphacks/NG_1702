@@ -1,4 +1,4 @@
 <% @ads.each do |ad| %>
     <%= ad.title  %>
+    <%= image_tag ad.image.url(:thumb) %>
 <% end %>
-<%= link_to "ログアウト", destroy_client_session_path, method: :delete %>

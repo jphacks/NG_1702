@@ -7,6 +7,7 @@
     <span></span>
     <% @user_ads.each do |user_ad|  %>
         <%= user_ad.ad.title %>
+        <%= image_tag user_ad.ad.image.url(:thumb) %>
         <%= link_to '詳細', user_ad, method: :get, id: user_ad.ad.title %>
     <% end %>
   </div>
