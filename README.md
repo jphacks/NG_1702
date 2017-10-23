@@ -1,6 +1,6 @@
 # HandOut
 
-[![Product Name](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/channel/UC4PtjOfZTbVp9DwtJv82Lzg)
+[![Hand Out](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/3vWEDOya9bs)
 
 ## 製品概要
 ### 広告 X 金融 X Tech
@@ -49,3 +49,6 @@ WEBで完結するのでアプリインストールという障壁がない
 
 #### デバイス
 * Eddystone(beacon規格)
+
+## 二日間でやったこと
+アイデア以外全部！
