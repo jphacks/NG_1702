@@ -1,6 +1,6 @@
 # HandOut
 
-[![Hand Out](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/3vWEDOya9bs)
+[![Hand Out](http://drive.google.com/uc?export=view&id=0B_cQg3-S3XEFY3FFR2JKRjE4OUU)](https://youtu.be/3vWEDOya9bs)
 
 ## 製品概要
 ### 広告 X 金融 X Tech
