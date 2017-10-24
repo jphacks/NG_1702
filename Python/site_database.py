@@ -1,9 +1,20 @@
-﻿def get_tags(url):
-    # return __get_sample_tags()
+"""
+Database for site information.
+See database_manager.py
+"""
+
+def get_tags(url):
+    """
+    Return tags generated from url as recommend.
+    Here, recommendation generation model will be called.
+    """
     return ["sample_tag_0", "sample_tag_1"]
 
-class SiteDatabase:
-    class Keys:
+class SiteDatabase(object):
+    """
+    Hold names of urls themself and tags extracted from those pages.
+    """
+    class Keys(object):
         TAGS = "tags"
         FREQUENCY = "frequency"
         IDX = "idx"
@@ -12,7 +23,7 @@ class SiteDatabase:
         self.database = {}
         self.idx_to_url = {}
         self.url_num = 0
-        
+
     def push(self, url):
         if not url in self.database:
             self.__add_new_url(url)
@@ -32,6 +43,9 @@ class SiteDatabase:
         return tags
 
     def __succ_frequency(self, url):
+        """
+        Increment the visits time of the url.
+        """
         fq = self.Keys.FREQUENCY
         if fq in self.database[url]:
             self.database[url][self.Keys.FREQUENCY] += 1
@@ -41,7 +55,7 @@ class SiteDatabase:
     def __show_tags(self, url):
         tags = self.database[url][self.Keys.TAGS]
         print ", ".join(tags)
-        
+
     def __show_freq(self, url):
         freq = self.database[url][self.Keys.FREQUENCY]
         tense = "" if freq == 1 else "s"
@@ -52,7 +66,7 @@ class SiteDatabase:
 
     def ch_idx_to_url(self, url_idx):
         return self.idx_to_url[url_idx]
-    
+
     def show_database(self):
         for k in sorted(self.database.keys()):
             print k

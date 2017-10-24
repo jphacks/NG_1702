@@ -1,4 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+
+"""
+Utils for testing or sample code.
+"""
 
 def __get_sample_url():
     sample_url = "https://ja.wikipedia.org/wiki/クレープ"
@@ -18,16 +22,14 @@ def __get_sample_tags():
 def __generate_fake_freq_table(num_user=10, num_obj=30):
     max_freq = 5
     table = np.random.randint(0,
-            max_freq,
-            num_user * num_obj
-            ).reshape([num_user, num_obj])
+                              max_freq,
+                              num_user * num_obj).reshape([num_user, num_obj])
     return table
 
 def __generate_fake_binary_table(num_user=10, num_obj=30):
     table = np.random.randint(0,
-            2,
-            num_user * num_obj
-            ).reshape([num_user, num_obj])
+                              2,
+                              num_user * num_obj).reshape([num_user, num_obj])
     return table
 
 def __get_random_sample_url():
@@ -50,23 +52,23 @@ def __sample_site_database_action():
     site_database.push(url)
     url_idx = site_database.ch_url_to_idx(url)
 
-    for i in range(2):
+    for _ in range(2):
         user_database.push(userid, url_idx)
         user_database.show_database(site_database)
 
 def __sample_user_database_action():
     site_database = SiteDatabase()
     url = __get_sample_url()
-    for i in range(2):
+    for _ in range(2):
         site_database.push(url)
         site_database.show_database()
 
 def __sample_database_action():
     from database import Database
     database = Database()
-    for i in range(10):
+    for _ in range(10):
         userid = __get_random_sample_userid()
-        for j in range(10):
+        for _ in range(10):
             url = __get_random_sample_url()
             database.push(userid, url)
 
