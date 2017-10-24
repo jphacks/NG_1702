@@ -1,12 +1,21 @@
-﻿import numpy as np
-from datetime import datetime
+"""
+Database for url information.
+See database_manager.py
+"""
 
-class UserDatabase:
-    class Table:
+from datetime import datetime
+import numpy as np
+
+class UserDatabase(object):
+    """
+    Hold names of users, indexes, and histories.
+    """
+
+    class Table(object):
         URL_IDX = ""
         DATE = ""
 
-    class Keys:
+    class Keys(object):
         URL_HISTORY = "url_history"
         IDX = "idx"
 
@@ -46,13 +55,13 @@ class UserDatabase:
 
     def __show_date(self, table):
         print table.DATE.strftime("%Y/%m/%d %H:%M:%S")
-        
+
     def ch_userid_to_idx(self, userid):
         return self.database[userid][self.Keys.IDX]
 
     def ch_idx_to_userid(self, user_idx):
         return self.idx_to_user[user_idx]
-      
+
     def show_database(self, site_database=None):
         for userid in sorted(self.database.keys()):
             print userid
