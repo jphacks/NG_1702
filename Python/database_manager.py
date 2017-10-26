@@ -1,10 +1,10 @@
 """
-Construct databases for site and user.
-Site database will be include site information,
+Construct databases for sites and users.
+Site database will include site information,
 such as index for management, and words extracted from title or its page's entire sentence.
 User database includes user information,
 such as index, and history user visited (url and date).
-DatabaseManager make a instance of Database, so DatabaseManager is used in other programs.
+DatabaseManager make an instance of Database, so DatabaseManager is used in other programs.
 """
 
 from site_database import  SiteDatabase
@@ -13,7 +13,7 @@ import collaborative_filtering_simple as cf
 
 class Database(object):
     """
-    Handle both database.
+    Handle both databases.
     """
     def __init__(self):
         self.user_database = UserDatabase()
@@ -29,7 +29,7 @@ class Database(object):
 
 class DatabaseManager(object):
     """
-    Handle both database.
+    Handle both databases.
     """
     def __init__(self):
         self.database = Database()
