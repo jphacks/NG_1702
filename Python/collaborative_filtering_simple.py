@@ -1,6 +1,6 @@
 """
-Calculate similarity of vectors between a target user and others.
-The feature vector consist of user url histories and Cos sim is used for similarity.
+Calculate similarities of vectors between a target user and others.
+The feature vector consist of user url histories and Cos sim is used for those calculations.
 When user1 have visited url1 and url2, and the others have visited some of those and url3 so far,
 then the vector is represented as follows.
 user1 [1, 1, 0]
