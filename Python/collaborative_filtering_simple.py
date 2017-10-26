@@ -1,14 +1,14 @@
 """
 Calculate similarity of vectors between a target user and others.
-The feature vector consist of user url histori and Cos sim is used for similarity.
+The feature vector consist of user url histories and Cos sim is used for similarity.
 When user1 have visited url1 and url2, and the others have visited some of those and url3 so far,
 then the vector is represented as follows.
 user1 [1, 1, 0]
 user2 [1, 0, 1]
 user3 [0, 1, 1]
 ...
-When a user visits a new site, then new column will be added by the database,
-same process runs for a new users.
+When a user visits new sites, then new columns will be added by the database,
+the same process runs for rows and new users.
 Now, it's binary (visited or not) but weighted one by visits time is also ok.
 
 Others vectors are sampled with uniform.
@@ -32,7 +32,7 @@ def normed(arr):
 
 def sample_table(table, num):
     """
-    Samples from table to reduce calculation cost.
+    Sample from table to reduce calculation cost.
     """
     if num >= table.shape[0]:
         return table
